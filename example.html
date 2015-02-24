@@ -21,70 +21,73 @@ This web page has been developed by Wani.
 
 <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css" />
 <link rel="stylesheet" href="/bower_components/nanum-barun-gothic/nanumbarungothic.css" />
-<link rel="stylesheet" href="/imagelistexpander.css" />
+<link rel="stylesheet" href="/css/example.css" />
 <style>
 body {
     font-family: 'Nanum Barun Gothic';
     font-weight: 200;
     color: #555;
 }
-.imagelistexpander-item {
+ul {
+    list-style: none;
+}
+.example-item {
     font-size: 25px;
     margin:0 10px;
     padding:10px 0;
 }
-.imagelistexpander-arrow:after {
+.example-arrow:after {
     border-bottom-color: #F6F3ED;
 }
-.imagelistexpander-item > .thumbnail {
+.example-item > .thumbnail {
     position:relative;
     width:300px;
     height:300px;
     overflow:hidden;
     cursor: pointer;
 }
-.imagelistexpander-item > .thumbnail > img {
+.example-item > .thumbnail > img {
     position: absolute;
     top: 50%;
     margin-top: -300px;
     max-width: 300px;
 }
-.imagelistexpander-item > .title {
+.example-item > .title {
     text-align: center;
     margin-top:20px;
     padding-bottom: 20px;
 }
 
-.imagelistexpander-expander {
+.example-expander {
     background: #F6F3ED;
 }
-.imagelistexpander-expander-contents {
+.example-expander-contents {
     margin:0 auto;
     width:1000px;
     padding: 20px 0;
 }
-.imagelistexpander-expander-contents:after {
+.example-expander-contents:after {
     clear:both;
     display:table;
     content:'';
 }
-.imagelistexpander-expander-contents > div.col {
+.example-expander-contents > div.col {
     float:left;
     width: 480px;
 }
-.imagelistexpander-expander-contents > div.col + div.col {
+.example-expander-contents > div.col + div.col {
     margin-left: 40px;
 }
-.imagelistexpander-expander-contents div.close {
+.example-expander-contents div.close {
     position: absolute;
     top:10px;
     right:20px;
 }
-.imagelistexpander-expander-contents div.title {
+.example-expander-contents div.title {
     font-weight: 500;
     color: #D28A3C;
 }
-.imagelistexpander-expander-contents div.contents {
+.example-expander-contents div.contents {
     margin-top: 10px;
     border-top: 1px solid #BCB098;
     border-bottom: 1px solid #BCB098;
@@ -93,7 +96,7 @@ body {
     line-height: 24px;
     color: #797262;
 }
-.imagelistexpander-expander-contents div.image > img {
+.example-expander-contents div.image > img {
     width: 100%;
     display:block;
 }
@@ -105,16 +108,16 @@ body {
 </head>  
 <body>
 
-<ul class="imagelistexpander-items">
-    <li class="imagelistexpander-item">
-        <div class="thumbnail imagelistexpander-trigger"><img src="/sample/sample1.jpg" alt="" /></div>
+<ul class="example-items">
+    <li class="example-item">
+        <div class="thumbnail example-trigger"><img src="/example/1.jpg" alt="" /></div>
         <div class="title">이상해씨</div>
-        <div class="imagelistexpander-arrow"></div>
-        <div class="imagelistexpander-expander">
-            <div class="imagelistexpander-expander-contents">
-                <div class="imagelistexpander-trigger-close close">x</div>
+        <div class="example-arrow"></div>
+        <div class="example-expander">
+            <div class="example-expander-contents">
+                <div class="example-trigger-close close">x</div>
                 <div class="col">
-                    <div class="image"><img src="/sample/sample1.jpg" alt="" /></div>
+                    <div class="image"><img src="/example/1.jpg" alt="" /></div>
                 </div>
                 <div class="col">
                     <div class="title">이상해씨</div>
@@ -130,15 +133,15 @@ body {
             </div>
         </div>
     </li>
-    <li class="imagelistexpander-item">
-        <div class="thumbnail imagelistexpander-trigger"><img src="/sample/sample2.jpg" alt="" /></div>
+    <li class="example-item">
+        <div class="thumbnail example-trigger"><img src="/example/2.jpg" alt="" /></div>
         <div class="title">파이리</div>
-        <div class="imagelistexpander-arrow"></div>
-        <div class="imagelistexpander-expander">
-            <div class="imagelistexpander-expander-contents">
-                <div class="imagelistexpander-trigger-close close">x</div>
+        <div class="example-arrow"></div>
+        <div class="example-expander">
+            <div class="example-expander-contents">
+                <div class="example-trigger-close close">x</div>
                 <div class="col">
-                    <div class="image"><img src="/sample/sample2.jpg" alt="" /></div>
+                    <div class="image"><img src="/example/2.jpg" alt="" /></div>
                 </div>
                 <div class="col">
                     <div class="title">파이리</div>
@@ -154,15 +157,15 @@ body {
             </div>
         </div>
     </li>
-    <li class="imagelistexpander-item">
-        <div class="thumbnail imagelistexpander-trigger"><img src="/sample/sample3.jpg" alt="" /></div>
+    <li class="example-item">
+        <div class="thumbnail example-trigger"><img src="/example/3.jpg" alt="" /></div>
         <div class="title">피카츄</div>
-        <div class="imagelistexpander-arrow"></div>
-        <div class="imagelistexpander-expander">
-            <div class="imagelistexpander-expander-contents">
-                <div class="imagelistexpander-trigger-close close">x</div>
+        <div class="example-arrow"></div>
+        <div class="example-expander">
+            <div class="example-expander-contents">
+                <div class="example-trigger-close close">x</div>
                 <div class="col">
-                    <div class="image"><img src="/sample/sample3.jpg" alt="" /></div>
+                    <div class="image"><img src="/example/3.jpg" alt="" /></div>
                 </div>
                 <div class="col">
                     <div class="title">피카츄</div>
@@ -178,15 +181,15 @@ body {
             </div>
         </div>
     </li>
-    <li class="imagelistexpander-item">
-        <div class="thumbnail imagelistexpander-trigger"><img src="/sample/sample4.jpg" alt="" /></div>
+    <li class="example-item">
+        <div class="thumbnail example-trigger"><img src="/example/4.jpg" alt="" /></div>
         <div class="title">페르시안</div>
-        <div class="imagelistexpander-arrow"></div>
-        <div class="imagelistexpander-expander">
-            <div class="imagelistexpander-expander-contents">
-                <div class="imagelistexpander-trigger-close close">x</div>
+        <div class="example-arrow"></div>
+        <div class="example-expander">
+            <div class="example-expander-contents">
+                <div class="example-trigger-close close">x</div>
                 <div class="col">
-                    <div class="image"><img src="/sample/sample4.jpg" alt="" /></div>
+                    <div class="image"><img src="/example/4.jpg" alt="" /></div>
                 </div>
                 <div class="col">
                     <div class="title">페르시안</div>
@@ -202,15 +205,15 @@ body {
             </div>
         </div>
     </li>
-    <li class="imagelistexpander-item">
-        <div class="thumbnail imagelistexpander-trigger"><img src="/sample/sample5.jpg" alt="" /></div>
+    <li class="example-item">
+        <div class="thumbnail example-trigger"><img src="/example/5.jpg" alt="" /></div>
         <div class="title">삐</div>
-        <div class="imagelistexpander-arrow"></div>
-        <div class="imagelistexpander-expander">
-            <div class="imagelistexpander-expander-contents">
-                <div class="imagelistexpander-trigger-close close">x</div>
+        <div class="example-arrow"></div>
+        <div class="example-expander">
+            <div class="example-expander-contents">
+                <div class="example-trigger-close close">x</div>
                 <div class="col">
-                    <div class="image"><img src="/sample/sample5.jpg" alt="" /></div>
+                    <div class="image"><img src="/example/5.jpg" alt="" /></div>
                 </div>
                 <div class="col">
                     <div class="title">삐</div>
@@ -226,15 +229,15 @@ body {
             </div>
         </div>
     </li>
-    <li class="imagelistexpander-item">
-        <div class="thumbnail imagelistexpander-trigger"><img src="/sample/sample6.jpg" alt="" /></div>
+    <li class="example-item">
+        <div class="thumbnail example-trigger"><img src="/example/6.jpg" alt="" /></div>
         <div class="title">토게피</div>
-        <div class="imagelistexpander-arrow"></div>
-        <div class="imagelistexpander-expander">
-            <div class="imagelistexpander-expander-contents">
-                <div class="imagelistexpander-trigger-close close">x</div>
+        <div class="example-arrow"></div>
+        <div class="example-expander">
+            <div class="example-expander-contents">
+                <div class="example-trigger-close close">x</div>
                 <div class="col">
-                    <div class="image"><img src="/sample/sample6.jpg" alt="" /></div>
+                    <div class="image"><img src="/example/6.jpg" alt="" /></div>
                 </div>
                 <div class="col">
                     <div class="title">토게피</div>
@@ -250,15 +253,15 @@ body {
             </div>
         </div>
     </li>
-    <li class="imagelistexpander-item">
-        <div class="thumbnail imagelistexpander-trigger"><img src="/sample/sample7.jpg" alt="" /></div>
+    <li class="example-item">
+        <div class="thumbnail example-trigger"><img src="/example/7.jpg" alt="" /></div>
         <div class="title">마자용</div>
-        <div class="imagelistexpander-arrow"></div>
-        <div class="imagelistexpander-expander">
-            <div class="imagelistexpander-expander-contents">
-                <div class="imagelistexpander-trigger-close close">x</div>
+        <div class="example-arrow"></div>
+        <div class="example-expander">
+            <div class="example-expander-contents">
+                <div class="example-trigger-close close">x</div>
                 <div class="col">
-                    <div class="image"><img src="/sample/sample7.jpg" alt="" /></div>
+                    <div class="image"><img src="/example/7.jpg" alt="" /></div>
                 </div>
                 <div class="col">
                     <div class="title">마자용</div>
@@ -274,15 +277,15 @@ body {
             </div>
         </div>
     </li>
-    <li class="imagelistexpander-item">
-        <div class="thumbnail imagelistexpander-trigger"><img src="/sample/sample8.jpg" alt="" /></div>
+    <li class="example-item">
+        <div class="thumbnail example-trigger"><img src="/example/8.jpg" alt="" /></div>
         <div class="title">세레비</div>
-        <div class="imagelistexpander-arrow"></div>
-        <div class="imagelistexpander-expander">
-            <div class="imagelistexpander-expander-contents">
-                <div class="imagelistexpander-trigger-close close">x</div>
+        <div class="example-arrow"></div>
+        <div class="example-expander">
+            <div class="example-expander-contents">
+                <div class="example-trigger-close close">x</div>
                 <div class="col">
-                    <div class="image"><img src="/sample/sample8.jpg" alt="" /></div>
+                    <div class="image"><img src="/example/8.jpg" alt="" /></div>
                 </div>
                 <div class="col">
                     <div class="title">세레비</div>
@@ -298,15 +301,15 @@ body {
             </div>
         </div>
     </li>
-    <li class="imagelistexpander-item">
-        <div class="thumbnail imagelistexpander-trigger"><img src="/sample/sample9.jpg" alt="" /></div>
+    <li class="example-item">
+        <div class="thumbnail example-trigger"><img src="/example/9.jpg" alt="" /></div>
         <div class="title">꼬부기</div>
-        <div class="imagelistexpander-arrow"></div>
-        <div class="imagelistexpander-expander">
-            <div class="imagelistexpander-expander-contents">
-                <div class="imagelistexpander-trigger-close close">x</div>
+        <div class="example-arrow"></div>
+        <div class="example-expander">
+            <div class="example-expander-contents">
+                <div class="example-trigger-close close">x</div>
                 <div class="col">
-                    <div class="image"><img src="/sample/sample9.jpg" alt="" /></div>
+                    <div class="image"><img src="/example/9.jpg" alt="" /></div>
                 </div>
                 <div class="col">
                     <div class="title">꼬부기</div>
@@ -325,15 +328,11 @@ body {
 </ul>
 
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>  
-<script src="/jquery.imagelistexpander.js"></script>  
+<script src="/js/jquery.imagelistexpander.js"></script>  
 <script>
 (function(global, $){
-    $('.imagelistexpander-items').imagelistexpander();
-    $('.imagelistexpander-items .imagelistexpander-item').eq(1).each(function() {
-        var $this = $(this);
-        $this.find('img').eq(1).load(function() {
-            $this.find('.imagelistexpander-trigger').trigger('click');
-        });
+    $('.example-items').imagelistexpander({
+        prefix: "example-"
     });
 })(this, jQuery)
 </script>
