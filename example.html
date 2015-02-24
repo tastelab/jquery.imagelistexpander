@@ -1,0 +1,341 @@
+<!DOCTYPE html>  
+<!--//  
+This web page has been developed by Wani.  
+ - me@wani.kr
+ - http://wani.kr
+-->
+<!--[if lt IE 7]><html class="ie6" lang="ko"><![endif]-->  
+<!--[if IE 7]><html class="ie7" lang="ko"><![endif]-->  
+<!--[if IE 8]><html class="ie8" lang="ko"><![endif]-->  
+<!--[if gt IE 8]><!--><html lang="ko"><!--<![endif]-->  
+<head>  
+<title>Image List Expander Example</title>  
+<meta charset="utf-8" />
+ 
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />  
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+ 
+<!--[if lt IE 9]>  
+<script src="/bower_components/html5shiv/dist/html5shiv.min.js"></script>  
+<![endif]-->
+
+<link rel="stylesheet" href="/bower_components/normalize.css/normalize.css" />
+<link rel="stylesheet" href="/bower_components/nanum-barun-gothic/nanumbarungothic.css" />
+<link rel="stylesheet" href="/imagelistexpander.css" />
+<style>
+body {
+    font-family: 'Nanum Barun Gothic';
+    font-weight: 200;
+    color: #555;
+}
+.imagelistexpander-item {
+    font-size: 25px;
+    margin:0 10px;
+    padding:10px 0;
+}
+.imagelistexpander-arrow:after {
+    border-bottom-color: #F6F3ED;
+}
+.imagelistexpander-item > .thumbnail {
+    position:relative;
+    width:300px;
+    height:300px;
+    overflow:hidden;
+    cursor: pointer;
+}
+.imagelistexpander-item > .thumbnail > img {
+    position: absolute;
+    top: 50%;
+    margin-top: -300px;
+    max-width: 300px;
+}
+.imagelistexpander-item > .title {
+    text-align: center;
+    margin-top:20px;
+    padding-bottom: 20px;
+}
+
+.imagelistexpander-expander {
+    background: #F6F3ED;
+}
+.imagelistexpander-expander-contents {
+    margin:0 auto;
+    width:1000px;
+    padding: 20px 0;
+}
+.imagelistexpander-expander-contents:after {
+    clear:both;
+    display:table;
+    content:'';
+}
+.imagelistexpander-expander-contents > div.col {
+    float:left;
+    width: 480px;
+}
+.imagelistexpander-expander-contents > div.col + div.col {
+    margin-left: 40px;
+}
+.imagelistexpander-expander-contents div.close {
+    position: absolute;
+    top:10px;
+    right:20px;
+}
+.imagelistexpander-expander-contents div.title {
+    font-weight: 500;
+    color: #D28A3C;
+}
+.imagelistexpander-expander-contents div.contents {
+    margin-top: 10px;
+    border-top: 1px solid #BCB098;
+    border-bottom: 1px solid #BCB098;
+    padding: 10px 0;
+    font-size: 14px;
+    line-height: 24px;
+    color: #797262;
+}
+.imagelistexpander-expander-contents div.image > img {
+    width: 100%;
+    display:block;
+}
+</style>
+<!--[if lt IE 9]>  
+<script src="/bower_components/respond/dest/respond.min.js"></script>  
+<![endif]-->
+ 
+</head>  
+<body>
+
+<ul class="imagelistexpander-items">
+    <li class="imagelistexpander-item">
+        <div class="thumbnail imagelistexpander-trigger"><img src="/sample/sample1.jpg" alt="" /></div>
+        <div class="title">이상해씨</div>
+        <div class="imagelistexpander-arrow"></div>
+        <div class="imagelistexpander-expander">
+            <div class="imagelistexpander-expander-contents">
+                <div class="imagelistexpander-trigger-close close">x</div>
+                <div class="col">
+                    <div class="image"><img src="/sample/sample1.jpg" alt="" /></div>
+                </div>
+                <div class="col">
+                    <div class="title">이상해씨</div>
+                    <div class="contents">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="imagelistexpander-item">
+        <div class="thumbnail imagelistexpander-trigger"><img src="/sample/sample2.jpg" alt="" /></div>
+        <div class="title">파이리</div>
+        <div class="imagelistexpander-arrow"></div>
+        <div class="imagelistexpander-expander">
+            <div class="imagelistexpander-expander-contents">
+                <div class="imagelistexpander-trigger-close close">x</div>
+                <div class="col">
+                    <div class="image"><img src="/sample/sample2.jpg" alt="" /></div>
+                </div>
+                <div class="col">
+                    <div class="title">파이리</div>
+                    <div class="contents">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="imagelistexpander-item">
+        <div class="thumbnail imagelistexpander-trigger"><img src="/sample/sample3.jpg" alt="" /></div>
+        <div class="title">피카츄</div>
+        <div class="imagelistexpander-arrow"></div>
+        <div class="imagelistexpander-expander">
+            <div class="imagelistexpander-expander-contents">
+                <div class="imagelistexpander-trigger-close close">x</div>
+                <div class="col">
+                    <div class="image"><img src="/sample/sample3.jpg" alt="" /></div>
+                </div>
+                <div class="col">
+                    <div class="title">피카츄</div>
+                    <div class="contents">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="imagelistexpander-item">
+        <div class="thumbnail imagelistexpander-trigger"><img src="/sample/sample4.jpg" alt="" /></div>
+        <div class="title">페르시안</div>
+        <div class="imagelistexpander-arrow"></div>
+        <div class="imagelistexpander-expander">
+            <div class="imagelistexpander-expander-contents">
+                <div class="imagelistexpander-trigger-close close">x</div>
+                <div class="col">
+                    <div class="image"><img src="/sample/sample4.jpg" alt="" /></div>
+                </div>
+                <div class="col">
+                    <div class="title">페르시안</div>
+                    <div class="contents">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="imagelistexpander-item">
+        <div class="thumbnail imagelistexpander-trigger"><img src="/sample/sample5.jpg" alt="" /></div>
+        <div class="title">삐</div>
+        <div class="imagelistexpander-arrow"></div>
+        <div class="imagelistexpander-expander">
+            <div class="imagelistexpander-expander-contents">
+                <div class="imagelistexpander-trigger-close close">x</div>
+                <div class="col">
+                    <div class="image"><img src="/sample/sample5.jpg" alt="" /></div>
+                </div>
+                <div class="col">
+                    <div class="title">삐</div>
+                    <div class="contents">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="imagelistexpander-item">
+        <div class="thumbnail imagelistexpander-trigger"><img src="/sample/sample6.jpg" alt="" /></div>
+        <div class="title">토게피</div>
+        <div class="imagelistexpander-arrow"></div>
+        <div class="imagelistexpander-expander">
+            <div class="imagelistexpander-expander-contents">
+                <div class="imagelistexpander-trigger-close close">x</div>
+                <div class="col">
+                    <div class="image"><img src="/sample/sample6.jpg" alt="" /></div>
+                </div>
+                <div class="col">
+                    <div class="title">토게피</div>
+                    <div class="contents">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="imagelistexpander-item">
+        <div class="thumbnail imagelistexpander-trigger"><img src="/sample/sample7.jpg" alt="" /></div>
+        <div class="title">마자용</div>
+        <div class="imagelistexpander-arrow"></div>
+        <div class="imagelistexpander-expander">
+            <div class="imagelistexpander-expander-contents">
+                <div class="imagelistexpander-trigger-close close">x</div>
+                <div class="col">
+                    <div class="image"><img src="/sample/sample7.jpg" alt="" /></div>
+                </div>
+                <div class="col">
+                    <div class="title">마자용</div>
+                    <div class="contents">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="imagelistexpander-item">
+        <div class="thumbnail imagelistexpander-trigger"><img src="/sample/sample8.jpg" alt="" /></div>
+        <div class="title">세레비</div>
+        <div class="imagelistexpander-arrow"></div>
+        <div class="imagelistexpander-expander">
+            <div class="imagelistexpander-expander-contents">
+                <div class="imagelistexpander-trigger-close close">x</div>
+                <div class="col">
+                    <div class="image"><img src="/sample/sample8.jpg" alt="" /></div>
+                </div>
+                <div class="col">
+                    <div class="title">세레비</div>
+                    <div class="contents">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="imagelistexpander-item">
+        <div class="thumbnail imagelistexpander-trigger"><img src="/sample/sample9.jpg" alt="" /></div>
+        <div class="title">꼬부기</div>
+        <div class="imagelistexpander-arrow"></div>
+        <div class="imagelistexpander-expander">
+            <div class="imagelistexpander-expander-contents">
+                <div class="imagelistexpander-trigger-close close">x</div>
+                <div class="col">
+                    <div class="image"><img src="/sample/sample9.jpg" alt="" /></div>
+                </div>
+                <div class="col">
+                    <div class="title">꼬부기</div>
+                    <div class="contents">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
+
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>  
+<script src="/jquery.imagelistexpander.js"></script>  
+<script>
+(function(global, $){
+    $('.imagelistexpander-items').imagelistexpander();
+    $('.imagelistexpander-items .imagelistexpander-item').eq(1).each(function() {
+        var $this = $(this);
+        $this.find('img').eq(1).load(function() {
+            $this.find('.imagelistexpander-trigger').trigger('click');
+        });
+    });
+})(this, jQuery)
+</script>
+</body>  
+</html> 
