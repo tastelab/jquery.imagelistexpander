@@ -18,10 +18,10 @@
   -o-transition: max-height 500ms ease;
   transition: max-height 500ms ease;
 }
-.imagelistexpander-arrow {
+.imagelistexpander-contents {
   position: relative;
 }
-.imagelistexpander-arrow:after {
+.imagelistexpander-contents:after {
   display: block;
   position: absolute;
   bottom: 0px;
@@ -38,6 +38,6 @@
   -o-transition: border-bottom-width 500ms ease;
   transition: border-bottom-width 500ms ease;
 }
-.imagelistexpander-.active .imagelistexpander-arrow:after {
+.imagelistexpander-item.active .imagelistexpander-contents:after {
   border-bottom-width: 30px;
 }

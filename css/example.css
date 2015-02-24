@@ -18,10 +18,10 @@
   -o-transition: max-height 500ms ease;
   transition: max-height 500ms ease;
 }
-.example-arrow {
+.example-contents {
   position: relative;
 }
-.example-arrow:after {
+.example-contents:after {
   display: block;
   position: absolute;
   bottom: 0px;
@@ -38,6 +38,118 @@
   -o-transition: border-bottom-width 500ms ease;
   transition: border-bottom-width 500ms ease;
 }
-.example-.active .example-arrow:after {
+.example-item.active .example-contents:after {
   border-bottom-width: 30px;
+}
+body {
+  font-family: 'Nanum Barun Gothic';
+  font-weight: 200;
+  color: #555;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.example-item {
+  text-align: left;
+  font-size: 25px;
+  margin: 0 10px;
+  padding: 10px 0;
+}
+.example-item .thumbnail {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.example-item .thumbnail > img {
+  position: absolute;
+  top: 50%;
+  margin-top: -300px;
+  max-width: 300px;
+}
+.example-item .title {
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+.example-contents:after {
+  border-bottom-color: #F6F3ED;
+}
+.example-expander {
+  background: #F6F3ED;
+}
+.example-expander-contents {
+  margin: 0 auto;
+  width: 1000px;
+  padding: 20px 0;
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  .example-expander-contents {
+    width: 640px;
+  }
+}
+@media (max-width: 639px) {
+  .example-expander-contents {
+    width: 100%;
+  }
+}
+.example-expander-contents:after {
+  clear: both;
+  display: table;
+  content: '';
+}
+.example-expander-contents > div.col {
+  float: left;
+  width: 480px;
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  .example-expander-contents > div.col {
+    width: 310px;
+  }
+}
+@media (max-width: 639px) {
+  .example-expander-contents > div.col {
+    float: none;
+    padding: 25px 20px 0;
+    width: auto;
+  }
+}
+.example-expander-contents > div.col + div.col {
+  margin-left: 40px;
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  .example-expander-contents > div.col + div.col {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 639px) {
+  .example-expander-contents > div.col + div.col {
+    margin-left: 0px;
+  }
+}
+.example-expander-contents div.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+.example-expander-contents div.title {
+  font-weight: 500;
+  color: #D28A3C;
+}
+.example-expander-contents div.contents {
+  margin-top: 10px;
+  border-top: 1px solid #BCB098;
+  border-bottom: 1px solid #BCB098;
+  padding: 10px 0;
+  font-size: 14px;
+  line-height: 24px;
+  color: #797262;
+}
+.example-expander-contents div.image > img {
+  width: 100%;
+  display: block;
 }

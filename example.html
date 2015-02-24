@@ -22,85 +22,6 @@ This web page has been developed by Wani.
 <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css" />
 <link rel="stylesheet" href="/bower_components/nanum-barun-gothic/nanumbarungothic.css" />
 <link rel="stylesheet" href="/css/example.css" />
-<style>
-body {
-    font-family: 'Nanum Barun Gothic';
-    font-weight: 200;
-    color: #555;
-}
-ul {
-    list-style: none;
-}
-.example-item {
-    font-size: 25px;
-    margin:0 10px;
-    padding:10px 0;
-}
-.example-arrow:after {
-    border-bottom-color: #F6F3ED;
-}
-.example-item > .thumbnail {
-    position:relative;
-    width:300px;
-    height:300px;
-    overflow:hidden;
-    cursor: pointer;
-}
-.example-item > .thumbnail > img {
-    position: absolute;
-    top: 50%;
-    margin-top: -300px;
-    max-width: 300px;
-}
-.example-item > .title {
-    text-align: center;
-    margin-top:20px;
-    padding-bottom: 20px;
-}
-
-.example-expander {
-    background: #F6F3ED;
-}
-.example-expander-contents {
-    margin:0 auto;
-    width:1000px;
-    padding: 20px 0;
-}
-.example-expander-contents:after {
-    clear:both;
-    display:table;
-    content:'';
-}
-.example-expander-contents > div.col {
-    float:left;
-    width: 480px;
-}
-.example-expander-contents > div.col + div.col {
-    margin-left: 40px;
-}
-.example-expander-contents div.close {
-    position: absolute;
-    top:10px;
-    right:20px;
-}
-.example-expander-contents div.title {
-    font-weight: 500;
-    color: #D28A3C;
-}
-.example-expander-contents div.contents {
-    margin-top: 10px;
-    border-top: 1px solid #BCB098;
-    border-bottom: 1px solid #BCB098;
-    padding: 10px 0;
-    font-size: 14px;
-    line-height: 24px;
-    color: #797262;
-}
-.example-expander-contents div.image > img {
-    width: 100%;
-    display:block;
-}
-</style>
 <!--[if lt IE 9]>  
 <script src="/bower_components/respond/dest/respond.min.js"></script>  
 <![endif]-->
@@ -110,9 +31,10 @@ ul {
 
 <ul class="example-items">
     <li class="example-item">
-        <div class="thumbnail example-trigger"><img src="/example/1.jpg" alt="" /></div>
-        <div class="title">이상해씨</div>
-        <div class="example-arrow"></div>
+        <div class="example-contents">
+            <div class="thumbnail example-trigger"><img src="/example/1.jpg" alt="" /></div>
+            <div class="title">이상해씨</div>
+        </div>
         <div class="example-expander">
             <div class="example-expander-contents">
                 <div class="example-trigger-close close">x</div>
@@ -134,9 +56,10 @@ ul {
         </div>
     </li>
     <li class="example-item">
-        <div class="thumbnail example-trigger"><img src="/example/2.jpg" alt="" /></div>
-        <div class="title">파이리</div>
-        <div class="example-arrow"></div>
+        <div class="example-contents">
+            <div class="thumbnail example-trigger"><img src="/example/2.jpg" alt="" /></div>
+            <div class="title">파이리</div>
+        </div>
         <div class="example-expander">
             <div class="example-expander-contents">
                 <div class="example-trigger-close close">x</div>
@@ -158,9 +81,10 @@ ul {
         </div>
     </li>
     <li class="example-item">
-        <div class="thumbnail example-trigger"><img src="/example/3.jpg" alt="" /></div>
-        <div class="title">피카츄</div>
-        <div class="example-arrow"></div>
+        <div class="example-contents">
+            <div class="thumbnail example-trigger"><img src="/example/3.jpg" alt="" /></div>
+            <div class="title">피카츄</div>
+        </div>
         <div class="example-expander">
             <div class="example-expander-contents">
                 <div class="example-trigger-close close">x</div>
@@ -182,9 +106,10 @@ ul {
         </div>
     </li>
     <li class="example-item">
-        <div class="thumbnail example-trigger"><img src="/example/4.jpg" alt="" /></div>
-        <div class="title">페르시안</div>
-        <div class="example-arrow"></div>
+        <div class="example-contents">
+            <div class="thumbnail example-trigger"><img src="/example/4.jpg" alt="" /></div>
+            <div class="title">페르시안</div>
+        </div>
         <div class="example-expander">
             <div class="example-expander-contents">
                 <div class="example-trigger-close close">x</div>
@@ -206,9 +131,10 @@ ul {
         </div>
     </li>
     <li class="example-item">
-        <div class="thumbnail example-trigger"><img src="/example/5.jpg" alt="" /></div>
-        <div class="title">삐</div>
-        <div class="example-arrow"></div>
+        <div class="example-contents">
+            <div class="thumbnail example-trigger"><img src="/example/5.jpg" alt="" /></div>
+            <div class="title">삐</div>
+        </div>
         <div class="example-expander">
             <div class="example-expander-contents">
                 <div class="example-trigger-close close">x</div>
@@ -230,9 +156,10 @@ ul {
         </div>
     </li>
     <li class="example-item">
-        <div class="thumbnail example-trigger"><img src="/example/6.jpg" alt="" /></div>
-        <div class="title">토게피</div>
-        <div class="example-arrow"></div>
+        <div class="example-contents">
+            <div class="thumbnail example-trigger"><img src="/example/6.jpg" alt="" /></div>
+            <div class="title">토게피</div>
+        </div>
         <div class="example-expander">
             <div class="example-expander-contents">
                 <div class="example-trigger-close close">x</div>
@@ -254,9 +181,10 @@ ul {
         </div>
     </li>
     <li class="example-item">
-        <div class="thumbnail example-trigger"><img src="/example/7.jpg" alt="" /></div>
-        <div class="title">마자용</div>
-        <div class="example-arrow"></div>
+        <div class="example-contents">
+            <div class="thumbnail example-trigger"><img src="/example/7.jpg" alt="" /></div>
+            <div class="title">마자용</div>
+        </div>
         <div class="example-expander">
             <div class="example-expander-contents">
                 <div class="example-trigger-close close">x</div>
@@ -278,9 +206,10 @@ ul {
         </div>
     </li>
     <li class="example-item">
-        <div class="thumbnail example-trigger"><img src="/example/8.jpg" alt="" /></div>
-        <div class="title">세레비</div>
-        <div class="example-arrow"></div>
+        <div class="example-contents">
+            <div class="thumbnail example-trigger"><img src="/example/8.jpg" alt="" /></div>
+            <div class="title">세레비</div>
+        </div>
         <div class="example-expander">
             <div class="example-expander-contents">
                 <div class="example-trigger-close close">x</div>
@@ -302,9 +231,10 @@ ul {
         </div>
     </li>
     <li class="example-item">
-        <div class="thumbnail example-trigger"><img src="/example/9.jpg" alt="" /></div>
-        <div class="title">꼬부기</div>
-        <div class="example-arrow"></div>
+        <div class="example-contents">
+            <div class="thumbnail example-trigger"><img src="/example/9.jpg" alt="" /></div>
+            <div class="title">꼬부기</div>
+        </div>
         <div class="example-expander">
             <div class="example-expander-contents">
                 <div class="example-trigger-close close">x</div>

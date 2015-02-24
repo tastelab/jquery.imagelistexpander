@@ -1,4 +1,4 @@
-/**
+/*
  * by Wani(me@wani.kr)
  */
 ;(function(global, factory){
@@ -12,6 +12,15 @@
     var defaultSettings = {
         prefix: "imagelistexpander-"
     };
+    var waitForFinalEvent = (function () {
+        var timer = null;
+        return function (callback, uniqueId) {
+            if (timer) {
+                clearTimeout(timer);
+            }
+            timer = setTimeout(callback, 500);
+        };
+    })();
     var imageListExpander = function(list, _settings) {
         var
         settings = $.extend({}, defaultSettings, _settings),
@@ -21,13 +30,28 @@
         $closeTrigger = $list.find('.'+ settings.prefix +'trigger-close'),
 
         initialize = function() {
-            $items.each(function() {
-                var $item = $(this);
-                $item.data('height', $item.height());
-            });
-            // bind events
+            $(window).bind('resize', resizeWindow);
             $trigger.bind('click', clickItem);
             $closeTrigger.bind('click', clickCloseTrigger);
+        },
+        resizeWindow = function() {
+            waitForFinalEvent(function() {
+                $items.filter('.active').each(function() {
+                    var
+                    $item = $(this),
+                    $expanderContents = $item.find('.'+ settings.prefix +'expander-contents'),
+                    $expander = $item.find('.'+ settings.prefix +'expander'),
+
+                    expanderHeight = $expanderContents.outerHeight();
+
+                    $item.css(
+                        'height',
+                        $item.find('.' + settings.prefix + 'contents').outerHeight() + expanderHeight
+                    );
+
+                    $expander.css('max-height', expanderHeight);
+                });
+            });
         },
         clickItem = function() {
             var $item = $(this).parents('.'+ settings.prefix +'item');
@@ -36,30 +60,38 @@
                 hideItems($item);
             } else {
                 showItem($item);
-                hideItems($item.siblings());                
             }
         },
         clickCloseTrigger = function() {
             hideItems($items);
         },
-        showItem = function($targetItem) {
-            var
-            $expanderContents = $targetItem.find('.'+ settings.prefix +'expander-contents'),
-            $expander = $targetItem.find('.'+ settings.prefix +'expander'),
+        showItem = function($item) {
+            hideItems($item.siblings());                
 
-            itemHeight = $targetItem.data('height'),
+            var
+            $expanderContents = $item.find('.'+ settings.prefix +'expander-contents'),
+            $expander = $item.find('.'+ settings.prefix +'expander'),
+
             expanderHeight = $expanderContents.outerHeight();
 
-            $targetItem.addClass('active').css('height', itemHeight + expanderHeight);
-            $expander.css('max-height', expanderHeight + 50);
+            $item.addClass('active').css(
+                'height',
+                $item.find('.' + settings.prefix + 'contents').outerHeight() + expanderHeight
+            );
+
+            $expander.css('max-height', expanderHeight);
         },
         hideItems = function($targetItems) {
             $targetItems = $targetItems.filter('.active');
+
             var $expanders = $targetItems.find('.'+ settings.prefix +'expander');
 
             $targetItems.each(function() {
-                var $elem = $(this);
-                $elem.css('height', $elem.data('height'));
+                var $item = $(this);
+                $item.css(
+                    'height',
+                    $item.find('.' + settings.prefix + 'contents').outerHeight()
+                );
             });
 
             $targetItems.removeClass('active');

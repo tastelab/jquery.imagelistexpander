@@ -22,10 +22,10 @@
             -o-transition: max-height 500ms ease;
             transition: max-height 500ms ease;
         }
-        &arrow {
+        &contents {
             position:relative;
         }
-        &arrow:after {
+        &contents:after {
             display: block;
             position: absolute;
             bottom: 0px;
@@ -42,7 +42,7 @@
             -o-transition: border-bottom-width 500ms ease;
             transition: border-bottom-width 500ms ease;
         }
-        &.active &arrow:after {
+        &item.active &contents:after {
             border-bottom-width: 30px;
         }
     }
