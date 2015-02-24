@@ -16,12 +16,14 @@ Current Version: 1.0.0
 ```html
 <ul class="imagelistexpander-list">
     <li class="imagelistexpander-list-item">
-        <div class="imagelistexpander-trigger">toggle</div>
-        <div class="imagelistexpander-arrow"></div>
+        <div class="imagelistexpander-contents">
+            <div class="imagelistexpander-trigger">toggle</div>
+            <!-- custom contents -->
+        </div>
         <div class="imagelistexpander-expander">
             <div class="imagelistexpander-expander-contents">
                 <div class="imagelistexpander-trigger-close">close</div>
-                <!-- custom contents -->
+                <!-- custom expander contents -->
             </div>
         </div>
     </li>
