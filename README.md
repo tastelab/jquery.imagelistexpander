@@ -1,7 +1,7 @@
 jQuery ImageListExpander
 ===
 
-Current Version: 0.0.1
+Current Version: 1.0.0
 
 그냥 있으면 좋을 것 같아서 만듭니다.
 
